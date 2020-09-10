@@ -1,4 +1,3 @@
 FROM ubuntu:latest
 #サンプルファイルを作成
-RUN touch test
-RUN echo 'hello world' > test
+RUN apt-get update && apt-get Python 3.8.1
