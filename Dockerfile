@@ -1,2 +1,2 @@
 FROM ubuntu:latest
-ENV key=value1
+RUN mkdir sample && \cd sample && \touch test
