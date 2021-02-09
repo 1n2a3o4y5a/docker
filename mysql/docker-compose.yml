@@ -1,0 +1,16 @@
+version: "3"
+services:
+  mysql:
+    build: ./
+    ports:
+     - 3306:3306
+    hostname: localhost
+    command: --default-authentication-plugin=mysql_native_password
+    volumes:
+      - ./mysql/db:/docker-entrypoint-initdb.d
+    image: original_mysql_world
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: root
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
